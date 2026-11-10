@@ -229,6 +229,20 @@ Corne Choc Pro supports four encoder definitions:
 3. Previous/next media track
 4. Volume down/up
 
-Sofle Choc Pro uses one encoder for volume and the other for previous/next
-media track. The encoder actions are available on its default, Lower, and
-Raise layers.
+Sofle Choc Pro in this configuration uses only the right encoder. Its action
+depends on the active layer:
+
+| Layer | Turn | Press |
+| --- | --- | --- |
+| `colemak` | Mouse scroll | Mute |
+| `navigate` | Workspace prev/next (`Hyper+[` / `Hyper+]`) | Workspace back-and-forth (`Hyper+\`) |
+| `numbers` | Left/Right arrow | Play/Pause |
+| `system` | Volume down/up | Play/Pause |
+| `mouse` | Mouse scroll | Left click |
+| `game` | Volume down/up | Play/Pause |
+
+The mouse layer and encoder scrolling require `CONFIG_ZMK_POINTING=y` in
+`config/sofle_choc_pro.conf`, which also disables ZMK Studio for this keyboard.
+The workflow builds only the Sofle targets listed in `build-sofle.yaml`.
+The Hyper chords are bound on the host: in AeroSpace on macOS, or in the Linux
+window manager of your choice.

@@ -1,0 +1,15 @@
+# Build matrix for the Sofle Choc Pro only. Selected by `build_matrix_path` in
+# .github/workflows/build.yml so that the upstream build.yaml stays untouched.
+---
+include:
+  - board: sofle_choc_pro_left
+    shield: sharp_mip
+    artifact-name: sofle_choc_pro_bt_left
+  - board: sofle_choc_pro_right
+    shield: sharp_mip
+    artifact-name: sofle_choc_pro_bt_right
+
+  - board: sofle_choc_pro_left
+    shield: settings_reset
+  - board: sofle_choc_pro_right
+    shield: settings_reset
